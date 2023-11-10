@@ -10,20 +10,19 @@ const App = () => {
       <View style={styles.headerContainer}>
         <ImageBackground
           source={require('../spotifyclone//assets/images/highklassified.jpg')}
-          style={{ flex: 1, height: '170%', width: '100%' }}
+          style={{ flex: 1, height: '210%', width: '100%' }}
         >
         </ImageBackground>
         <View style={styles.backIconContainer}>
           {/* <Entypo name="chevron-thin-left" size={20} color={'black'}></Entypo> */}
+          <Text style={styles.headerBackIcon}>Icon</Text>
+
         </View>
         <View style={styles.headerTextContainer}>
-          <Text style={styles.headerText}></Text>
+          <Text style={styles.headerText}>High Klassfied</Text>
         </View>
 
       </View>
-
-
-
       <View style={styles.bodyContainer}>
         <View style={styles.nextContainer}>
 
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
 
   },
   backIconContainer: {
-    backgroundColor: 'white',
+    backgroundColor: 'pink',
     position:'absolute',
     top:'10%',
     left:'5%',
@@ -62,6 +61,9 @@ const styles = StyleSheet.create({
     display:'flex',
     justifyContent:'center',
     alignItems:'center'
+  },
+  headerBackIcon:{
+
   },
   headerTextContainer: {
     display:'flex',
