@@ -25,6 +25,12 @@ const App = () => {
       </View>
       <View style={styles.bodyContainer}>
         <View style={styles.nextContainer}>
+          <View style={styles.upNextContainer}>
+
+          </View>
+          <View style={styles.upNextSongContainer}>
+            
+          </View>
 
         </View>
         <View style={styles.songListContainer}>
@@ -46,34 +52,33 @@ const styles = StyleSheet.create({
     // backgroundColor: 'orange',
     flex: 1,
     display: 'flex',
-    justifyContent:'space-between',
-    
+    justifyContent: 'space-between',
 
   },
   backIconContainer: {
     backgroundColor: 'pink',
-    position:'absolute',
-    top:'10%',
-    left:'5%',
-    height:40,
-    width:40,
-    borderRadius:20,
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center'
+    position: 'absolute',
+    top: '10%',
+    left: '5%',
+    height: 40,
+    width: 40,
+    borderRadius: 20,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  headerBackIcon:{
+  headerBackIcon: {
 
   },
   headerTextContainer: {
-    display:'flex',
-    alignItems:'center',
+    display: 'flex',
+    alignItems: 'center',
     // backgroundColor: 'magenta',
 
   },
-  headerText:{
-    fontSize:60,
-    color:'white'
+  headerText: {
+    fontSize: 60,
+    color: 'white'
   },
   bodyContainer: {
     backgroundColor: 'blue',
@@ -82,6 +87,15 @@ const styles = StyleSheet.create({
   nextContainer: {
     backgroundColor: 'dodgerblue',
     flex: 1
+  },
+  upNextContainer:{
+    backgroundColor: 'pink',
+    flex:1,
+
+  },
+  upNextSongContainer:{
+    backgroundColor: 'tan',
+    flex:1,
   },
   songListContainer: {
     backgroundColor: 'lightblue',
