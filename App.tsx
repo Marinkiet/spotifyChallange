@@ -10,7 +10,7 @@ const App = () => {
       <View style={styles.headerContainer}>
         <ImageBackground
           source={require('../spotifyclone//assets/images/highklassified.jpg')}
-          style={{ flex: 1, height: '210%', width: '100%' }}
+          style={{ flex: 1, height: '200%', width: '100%' }}
         >
         </ImageBackground>
         <View style={styles.backIconContainer}>
@@ -26,10 +26,37 @@ const App = () => {
       <View style={styles.bodyContainer}>
         <View style={styles.nextContainer}>
           <View style={styles.upNextContainer}>
+            <View style={styles.upNextDetails}>
 
+              <View style={styles.upNextDetailsSongCount}>
+                <Text>Abalaleli benyanga anbangu-166,307</Text>
+              </View>
+
+              <View style={styles.upNextDetailsButtonAndIconContainer}>
+
+                <View style={styles.upNextDetailsButtonContainer}>
+                  <Text>Button</Text>
+                </View>
+
+                <View style={styles.upNextDetailsIconContainer}>
+                  <Text>icon</Text>
+                </View>
+
+              </View>
+
+            </View>
+            <View style={styles.upNextIconsContainer}>
+              <View style={styles.upNextPlayIconContainer}>
+              <Text>icon</Text>
+              </View>
+              <View style={styles.upNextShuffleIconContainer}>
+              <Text>icon</Text>
+              </View>
+
+            </View>
           </View>
           <View style={styles.upNextSongContainer}>
-            
+
           </View>
 
         </View>
@@ -82,24 +109,93 @@ const styles = StyleSheet.create({
   },
   bodyContainer: {
     backgroundColor: 'blue',
-    flex: 1
+    flex: 1,
   },
   nextContainer: {
     backgroundColor: 'dodgerblue',
-    flex: 1
+    flex: 1,
+  
   },
-  upNextContainer:{
+  upNextContainer: {
     backgroundColor: 'pink',
-    flex:1,
-
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'row',
+    marginHorizontal:'2%'
   },
-  upNextSongContainer:{
-    backgroundColor: 'tan',
+  upNextDetails: {
+    backgroundColor: 'orange',
+    flex: 1,
+  },
+  upNextDetailsSongCount:{
     flex:1,
+    backgroundColor:'pink',
+    display:'flex',
+    justifyContent:'center'
+  },
+  upNextDetailsButtonAndIconContainer:{
+    flex:1,
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+   
+  },
+  upNextDetailsButtonContainer:{
+    flex:1,
+    backgroundColor:'purple',
+    height:'90%',
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius:7,
+    borderColor:'white',
+    borderWidth:2,
+  },
+  upNextDetailsIconContainer:{
+    flex:1,
+    backgroundColor:'yellow',
+    height:'100%',
+    display:'flex',
+    justifyContent:'center',
+  },
+  upNextIconsContainer: {
+    backgroundColor: 'lightblue',
+    width: '30%',
+    height: '100%',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  upNextPlayIconContainer:{
+    backgroundColor:'green',
+    height:70,
+    width:70,
+    borderRadius:35,
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  upNextShuffleIconContainer:{
+    position:'absolute',
+    top:'60%',
+    left:'60%',
+    backgroundColor:'white',
+    height:25,
+    width:25,
+    borderRadius:15,
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  upNextSongContainer: {
+    backgroundColor: 'tan',
+    flex: 1,
+    marginHorizontal:'2%'
   },
   songListContainer: {
-    backgroundColor: 'lightblue',
-    flex: 1
+    backgroundColor: 'orange',
+    flex: 1,
+    marginHorizontal:'2%'
   }
 })
 export default App
