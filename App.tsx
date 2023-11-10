@@ -17,7 +17,7 @@ const App = () => {
           {/* <Entypo name="chevron-thin-left" size={20} color={'black'}></Entypo> */}
         </View>
         <View style={styles.headerTextContainer}>
-          <Text style={styles.headerText}>hello thereso</Text>
+          <Text style={styles.headerText}></Text>
         </View>
 
       </View>
