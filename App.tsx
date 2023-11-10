@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
   upNextShuffleIconContainer:{
     position:'absolute',
     top:'65%',
-    left:'60%',
+    left:'64%',
     backgroundColor:'white',
     height:23,
     width:23,
