@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet, ImageBackground, Touchable, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 //Icons
@@ -33,10 +33,12 @@ const App = () => {
               </View>
 
               <View style={styles.upNextDetailsButtonAndIconContainer}>
-
-                <View style={styles.upNextDetailsButtonContainer}>
+              <TouchableOpacity style={styles.upNextDetailsButtonContainer}>
+              <View>
                   <Text>Button</Text>
                 </View>
+              </TouchableOpacity>
+               
 
                 <View style={styles.upNextDetailsIconContainer}>
                   <Text>icon</Text>
@@ -143,13 +145,13 @@ const styles = StyleSheet.create({
   upNextDetailsButtonContainer:{
     flex:1,
     backgroundColor:'purple',
-    height:'90%',
+    height:'62%',
     display:'flex',
     alignItems:'center',
     justifyContent:'center',
     borderRadius:7,
     borderColor:'white',
-    borderWidth:2,
+    borderWidth:1.5,
   },
   upNextDetailsIconContainer:{
     flex:1,
