@@ -59,7 +59,12 @@ const App = () => {
 
           <View style={styles.upNextSongContainer}>
             <View style={styles.upNextAlbumArtContainer}>
-
+            <View style={styles.upNextAlbumArtImage}>
+                <Text>icon</Text>
+              </View>
+              <View style={styles.upNextLikedBadge}>
+                <Text>icon</Text>
+              </View>
             </View>
             <View style={styles.upNextArtistDetailsContainer}>
 
@@ -209,6 +214,34 @@ const styles = StyleSheet.create({
     backgroundColor:'pink',
     width:'20%',
     height:'100%',
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  upNextAlbumArtImage:{
+    backgroundColor:'white',
+    height:50,
+    width:50,
+    borderRadius:25,
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center'
+
+  },
+  upNextLikedBadge:{
+    backgroundColor:'pink',
+    height:30,
+    width:30,
+    borderRadius:15,
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    position:'relative',
+    bottom:25,
+    left:20,
+    borderWidth:2,
+    borderColor:'white'
+
   },
   upNextArtistDetailsContainer:{
     backgroundColor:'lightgreen',
