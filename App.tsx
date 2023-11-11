@@ -75,7 +75,7 @@ const App = () => {
                 </View>
             </View>
             <View style={styles.upNextNextIconContainer}>
-
+            
             <Text>Icon</Text>
             </View>
 
@@ -83,7 +83,17 @@ const App = () => {
 
         </View>
         <View style={styles.songListContainer}>
-
+          <View style={styles.songListTitleContainer}>
+          <Text>SongListTitle</Text>
+          </View>
+          <View style={styles.songListSongsContainer}>
+            <View style={styles.songListSongContainer}>
+                <View style={styles.songListNumberAndAlbum}></View>
+                <View style={styles.songListNumberSongNameAndViewCount}></View>
+                <View style={styles.songListMoreIcon}></View>
+            </View>
+            
+          </View>
         </View>
 
       </View>
@@ -274,6 +284,35 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
     flex: 1,
     marginHorizontal: '2%'
+  },
+  songListTitleContainer:{
+    backgroundColor:'white',
+    flex:1
+  },
+  songListSongsContainer:{
+    backgroundColor:'lightgreen',
+    flex:3
+  },
+  songListSongContainer:{
+    backgroundColor:'lightblue',
+    height:'50%',
+    display:'flex',
+    flexDirection:'row'
+  },
+  songListNumberAndAlbum:{
+    backgroundColor:'lightgray',
+    width:'25%',
+    height:'100%'
+  },
+  songListNumberSongNameAndViewCount:{
+    backgroundColor:'yellow',
+    flex:1
+  },
+  songListMoreIcon:{
+    backgroundColor:'red',
+    width:'15%',
+    height:'100%'
   }
 })
+
 export default App
