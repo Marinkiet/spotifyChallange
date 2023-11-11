@@ -33,12 +33,11 @@ const App = () => {
               </View>
 
               <View style={styles.upNextDetailsButtonAndIconContainer}>
-              <TouchableOpacity style={styles.upNextDetailsButtonContainer}>
-              <View>
-                  <Text>Button</Text>
-                </View>
-              </TouchableOpacity>
-               
+                <TouchableOpacity style={styles.upNextDetailsButtonContainer}>
+                  <View>
+                    <Text>Button</Text>
+                  </View>
+                </TouchableOpacity>
 
                 <View style={styles.upNextDetailsIconContainer}>
                   <Text>icon</Text>
@@ -49,15 +48,25 @@ const App = () => {
             </View>
             <View style={styles.upNextIconsContainer}>
               <View style={styles.upNextPlayIconContainer}>
-              <Text>icon</Text>
+                <Text>icon</Text>
               </View>
               <View style={styles.upNextShuffleIconContainer}>
-              <Text>icon</Text>
+                <Text>icon</Text>
               </View>
 
             </View>
           </View>
+
           <View style={styles.upNextSongContainer}>
+            <View style={styles.upNextAlbumArtContainer}>
+
+            </View>
+            <View style={styles.upNextArtistDetailsContainer}>
+
+            </View>
+            <View style={styles.upNextNextIconContainer}>
+
+            </View>
 
           </View>
 
@@ -116,88 +125,104 @@ const styles = StyleSheet.create({
   nextContainer: {
     backgroundColor: 'dodgerblue',
     flex: 1,
-  
+
   },
   upNextContainer: {
     backgroundColor: 'pink',
     flex: 1,
     display: 'flex',
     flexDirection: 'row',
-    marginHorizontal:'2%'
+    marginHorizontal: '2%'
   },
   upNextDetails: {
     backgroundColor: 'orange',
     flex: 1,
   },
-  upNextDetailsSongCount:{
-    flex:1,
-    backgroundColor:'pink',
-    display:'flex',
-    justifyContent:'center'
+  upNextDetailsSongCount: {
+    flex: 1,
+    backgroundColor: 'pink',
+    display: 'flex',
+    justifyContent: 'center'
   },
-  upNextDetailsButtonAndIconContainer:{
-    flex:1,
-    display:'flex',
-    flexDirection:'row',
-    alignItems:'center',
-   
+  upNextDetailsButtonAndIconContainer: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+
   },
-  upNextDetailsButtonContainer:{
-    flex:1,
-    backgroundColor:'purple',
-    height:'62%',
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
-    borderRadius:7,
-    borderColor:'white',
-    borderWidth:1.5,
+  upNextDetailsButtonContainer: {
+    flex: 1,
+    backgroundColor: 'purple',
+    height: '62%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 7,
+    borderColor: 'white',
+    borderWidth: 1.5,
   },
-  upNextDetailsIconContainer:{
-    flex:1,
-    backgroundColor:'yellow',
-    height:'100%',
-    display:'flex',
-    justifyContent:'center',
+  upNextDetailsIconContainer: {
+    flex: 1,
+    backgroundColor: 'yellow',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
   },
   upNextIconsContainer: {
     backgroundColor: 'lightblue',
     width: '30%',
     height: '100%',
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  upNextPlayIconContainer:{
-    backgroundColor:'green',
-    height:70,
-    width:70,
-    borderRadius:35,
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+  upNextPlayIconContainer: {
+    backgroundColor: 'green',
+    height: 70,
+    width: 70,
+    borderRadius: 35,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  upNextShuffleIconContainer:{
-    position:'absolute',
-    top:'65%',
-    left:'64%',
-    backgroundColor:'white',
-    height:23,
-    width:23,
-    borderRadius:15,
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+  upNextShuffleIconContainer: {
+    position: 'absolute',
+    top: '65%',
+    left: '64%',
+    backgroundColor: 'white',
+    height: 23,
+    width: 23,
+    borderRadius: 15,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   upNextSongContainer: {
     backgroundColor: 'tan',
     flex: 1,
-    marginHorizontal:'2%'
+    marginHorizontal: '2%',
+    display:'flex',
+    flexDirection:'row'
+  },
+  upNextAlbumArtContainer:{
+    backgroundColor:'pink',
+    width:'20%',
+    height:'100%',
+  },
+  upNextArtistDetailsContainer:{
+    backgroundColor:'lightgreen',
+    flex:1
+  },
+  upNextNextIconContainer:{
+    backgroundColor:'red',
+    width:'15%',
+    height:'100%',
   },
   songListContainer: {
     backgroundColor: 'orange',
     flex: 1,
-    marginHorizontal:'2%'
+    marginHorizontal: '2%'
   }
 })
 export default App
