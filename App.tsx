@@ -57,17 +57,22 @@ const App = () => {
             </View>
           </View>
 
-          <View style={styles.upNextSongContainer}>
-            <View style={styles.upNextAlbumArtContainer}>
-            <View style={styles.upNextAlbumArtImage}>
+          <View style={styles.likedSongsontainer}>
+            <View style={styles.likedSongsAlbumArtContainer}>
+            <View style={styles.likedSongAlbumArtImage}>
                 <Text>icon</Text>
               </View>
-              <View style={styles.upNextLikedBadge}>
+              <View style={styles.likedSongIconBadge}>
                 <Text>icon</Text>
               </View>
             </View>
-            <View style={styles.upNextArtistDetailsContainer}>
-
+            <View style={styles.likedSongArtistDetailsContainer}>
+                <View style={styles.likedSongTitleContainer}>
+                <Text>Liked Songs Title</Text>
+                </View>
+                <View style={styles.likedSongSongCountandArtistNameContainer}>
+                <Text>5 liked - Songs</Text>
+                </View>
             </View>
             <View style={styles.upNextNextIconContainer}>
 
@@ -203,14 +208,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  upNextSongContainer: {
+  likedSongsontainer: {
     backgroundColor: 'tan',
     flex: 1,
     marginHorizontal: '2%',
     display:'flex',
     flexDirection:'row'
   },
-  upNextAlbumArtContainer:{
+  likedSongsAlbumArtContainer:{
     backgroundColor:'pink',
     width:'20%',
     height:'100%',
@@ -218,7 +223,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center'
   },
-  upNextAlbumArtImage:{
+  likedSongAlbumArtImage:{
     backgroundColor:'white',
     height:50,
     width:50,
@@ -228,7 +233,7 @@ const styles = StyleSheet.create({
     justifyContent:'center'
 
   },
-  upNextLikedBadge:{
+  likedSongIconBadge:{
     backgroundColor:'pink',
     height:30,
     width:30,
@@ -243,9 +248,24 @@ const styles = StyleSheet.create({
     borderColor:'white'
 
   },
-  upNextArtistDetailsContainer:{
+  likedSongArtistDetailsContainer:{
     backgroundColor:'lightgreen',
-    flex:1
+    flex:1,
+    marginVertical:30
+  },
+  likedSongTitleContainer:{
+    backgroundColor:'white',
+    flex:1,
+    // display:'flex',
+    // justifyContent:'center'
+  },
+  likedSongSongCountandArtistNameContainer:{
+    backgroundColor:'blue',
+    flex:1,
+    // display:'flex',
+    // justifyContent:'center',
+
+
   },
   upNextNextIconContainer:{
     backgroundColor:'red',
