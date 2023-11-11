@@ -76,6 +76,7 @@ const App = () => {
             </View>
             <View style={styles.upNextNextIconContainer}>
 
+            <Text>Icon</Text>
             </View>
 
           </View>
@@ -256,21 +257,18 @@ const styles = StyleSheet.create({
   likedSongTitleContainer:{
     backgroundColor:'white',
     flex:1,
-    // display:'flex',
-    // justifyContent:'center'
   },
   likedSongSongCountandArtistNameContainer:{
     backgroundColor:'blue',
     flex:1,
-    // display:'flex',
-    // justifyContent:'center',
-
-
   },
   upNextNextIconContainer:{
     backgroundColor:'red',
     width:'15%',
     height:'100%',
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
   },
   songListContainer: {
     backgroundColor: 'orange',
