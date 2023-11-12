@@ -1,9 +1,32 @@
-import { View, Text, SafeAreaView, StyleSheet, ImageBackground, Touchable, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, ImageBackground, FlatList, TouchableOpacity, Image } from 'react-native'
+import React, { useState } from 'react'
 
-//Icons
-// import Entypo from 'react-native-vector-icons/Entypo'
+
 const App = () => {
+  const [song, setSong] = useState([
+    {
+      songName: "I'm fine - IMANU Remix",
+      viewCount: '823,428',
+      imageUrl: (require("../spotifyclone/assets/images/image2.jpg")),
+      key: "1"
+    },
+    {
+      songName: "I'm fine",
+      viewCount: '823,428',
+      imageUrl: (require("../spotifyclone/assets/images/image1.jpg")),
+      key: "2"
+    },
+    {
+      songName: "I'm fine",
+      viewCount: '823,428',
+      key: "3"
+    },
+    {
+      songName: "I'm fine",
+      viewCount: '823,428',
+      key: "4"
+    },
+  ])
   return (
     <View style={styles.container}>
 
@@ -59,7 +82,7 @@ const App = () => {
 
           <View style={styles.likedSongsontainer}>
             <View style={styles.likedSongsAlbumArtContainer}>
-            <View style={styles.likedSongAlbumArtImage}>
+              <View style={styles.likedSongAlbumArtImage}>
                 <Text>icon</Text>
               </View>
               <View style={styles.likedSongIconBadge}>
@@ -67,34 +90,67 @@ const App = () => {
               </View>
             </View>
             <View style={styles.likedSongArtistDetailsContainer}>
-                <View style={styles.likedSongTitleContainer}>
+              <View style={styles.likedSongTitleContainer}>
                 <Text>Liked Songs Title</Text>
-                </View>
-                <View style={styles.likedSongSongCountandArtistNameContainer}>
+              </View>
+              <View style={styles.likedSongSongCountandArtistNameContainer}>
                 <Text>5 liked - Songs</Text>
-                </View>
+              </View>
             </View>
             <View style={styles.upNextNextIconContainer}>
-            
-            <Text>Icon</Text>
+
+              <Text>Icon</Text>
             </View>
 
           </View>
 
         </View>
         <View style={styles.songListContainer}>
+
           <View style={styles.songListTitleContainer}>
-          <Text>SongListTitle</Text>
+            <Text>SongListTitle</Text>
           </View>
           <View style={styles.songListSongsContainer}>
-            <View style={styles.songListSongContainer}>
-                <View style={styles.songListNumberAndAlbum}></View>
-                <View style={styles.songListNumberSongNameAndViewCount}></View>
-                <View style={styles.songListMoreIcon}></View>
-            </View>
-            
+            <FlatList
+
+              data={song}
+              //destrucuture the item
+              renderItem={({ item }) => (
+                //must have key as flatlist finds it
+                <View style={styles.songListSongContainer}>
+                  <View style={styles.songListNumberAndAlbum}>
+                    <View style={styles.songListNumberContainer}>
+                      <Text>{item.key}</Text>
+                    </View>
+                    <View style={styles.songListAlbumContainer}>
+                     <Image
+                     style={styles.songListAlbumImage}
+                     source={item.imageUrl}
+                     />
+                    </View>
+
+                  </View>
+                  <View style={styles.songListNumberSongNameAndViewCountContainer}>
+                    <View style={styles.songListNumberSongNameContainer}>
+                    <Text>{item.songName}</Text>
+                    </View>
+                    <View style={styles.songListNumberSongViewCountContainer}>
+                      <Text>{item.viewCount}</Text>
+                    </View>
+                  </View>
+                  <View style={styles.songListMoreIcon}>
+                    <Text>Icon</Text>
+                  </View>
+                </View>
+
+              )} />
           </View>
+
+
+
         </View>
+
+
 
       </View>
     </View>
@@ -223,96 +279,147 @@ const styles = StyleSheet.create({
     backgroundColor: 'tan',
     flex: 1,
     marginHorizontal: '2%',
-    display:'flex',
-    flexDirection:'row'
+    display: 'flex',
+    flexDirection: 'row'
   },
-  likedSongsAlbumArtContainer:{
-    backgroundColor:'pink',
-    width:'20%',
-    height:'100%',
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center'
+  likedSongsAlbumArtContainer: {
+    backgroundColor: 'pink',
+    width: '20%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  likedSongAlbumArtImage:{
-    backgroundColor:'white',
-    height:50,
-    width:50,
-    borderRadius:25,
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center'
+  likedSongAlbumArtImage: {
+    backgroundColor: 'white',
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
 
   },
-  likedSongIconBadge:{
-    backgroundColor:'pink',
-    height:30,
-    width:30,
-    borderRadius:15,
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
-    position:'relative',
-    bottom:25,
-    left:20,
-    borderWidth:2,
-    borderColor:'white'
+  likedSongIconBadge: {
+    backgroundColor: 'pink',
+    height: 30,
+    width: 30,
+    borderRadius: 15,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    bottom: 25,
+    left: 20,
+    borderWidth: 2,
+    borderColor: 'white'
 
   },
-  likedSongArtistDetailsContainer:{
-    backgroundColor:'lightgreen',
-    flex:1,
-    marginVertical:30
+  likedSongArtistDetailsContainer: {
+    backgroundColor: 'lightgreen',
+    flex: 1,
+    marginVertical: 30
   },
-  likedSongTitleContainer:{
-    backgroundColor:'white',
-    flex:1,
+  likedSongTitleContainer: {
+    backgroundColor: 'white',
+    flex: 1,
   },
-  likedSongSongCountandArtistNameContainer:{
-    backgroundColor:'blue',
-    flex:1,
+  likedSongSongCountandArtistNameContainer: {
+    backgroundColor: 'blue',
+    flex: 1,
   },
-  upNextNextIconContainer:{
-    backgroundColor:'red',
-    width:'15%',
-    height:'100%',
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
+  upNextNextIconContainer: {
+    backgroundColor: 'red',
+    width: '15%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   songListContainer: {
     backgroundColor: 'orange',
     flex: 1,
     marginHorizontal: '2%'
   },
-  songListTitleContainer:{
-    backgroundColor:'white',
-    flex:1
+  songListTitleContainer: {
+    backgroundColor: 'white',
+    flex: 1
+    // height: '20%',
+    // width:'100%'
   },
-  songListSongsContainer:{
-    backgroundColor:'lightgreen',
-    flex:3
+  songListSongsContainer: {
+    backgroundColor: 'lightgreen',
+    flex: 4
   },
-  songListSongContainer:{
-    backgroundColor:'lightblue',
-    height:'50%',
+  songListSongContainer: {
+    backgroundColor: 'lightblue',
+    height: '70%',
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  songListNumberAndAlbum: {
+    backgroundColor: 'lightgray',
+    width: '25%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  songListAlbumImage:{
+    width:'100%',
+    height:'100%'
+  },
+  songListNumberSongNameAndViewCountContainer: {
+    backgroundColor: 'yellow',
+    flex: 1,
+  },
+  songListNumberSongNameContainer: {
+    backgroundColor: 'grey',
+    flex: 1,
+  },
+  songListNumberSongViewCountContainer: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+  songListNumberContainer: {
+    backgroundColor: 'lightblue',
+    width: '30%',
+    height: '100%',
     display:'flex',
-    flexDirection:'row'
+    alignItems:'center',
+    justifyContent:'center'
   },
-  songListNumberAndAlbum:{
-    backgroundColor:'lightgray',
-    width:'25%',
-    height:'100%'
+  songListAlbumContainer: {
+    // backgroundColor: 'orange',
+    flex: 1,
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center'
   },
-  songListNumberSongNameAndViewCount:{
-    backgroundColor:'yellow',
-    flex:1
+  songListMoreIcon: {
+    backgroundColor: 'red',
+    width: '15%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  songListMoreIcon:{
-    backgroundColor:'red',
-    width:'15%',
-    height:'100%'
-  }
+
 })
 
 export default App
+
+// <View style={styles.songListSongsContainer}>
+// <View style={styles.songListSongContainer}>
+//   <View style={styles.songListNumberAndAlbum}>
+//     <View style={styles.songListNumberContainer}></View>
+//     <View style={styles.songListAlbumContainer}></View>
+//   </View>
+//   <View style={styles.songListNumberSongNameAndViewCountContainer}>
+//     <View style={styles.songListNumberSongNameContainer}></View>
+//     <View style={styles.songListNumberSongViewCountContainer}></View>
+//   </View>
+//   <View style={styles.songListMoreIcon}>
+//     <Text>Icon</Text>
+//   </View>
+// </View>
+// </View>
