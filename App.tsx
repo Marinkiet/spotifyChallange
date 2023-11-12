@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ImageBackground, FlatList, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, FlatList,StatusBar, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
 
 
@@ -29,6 +29,7 @@ const App = () => {
   ])
   return (
     <View style={styles.container}>
+      <StatusBar barStyle = "light-content" hidden = {false} backgroundColor = "#00BCD4" translucent = {true}/>
 
       <View style={styles.headerContainer}>
         <ImageBackground
