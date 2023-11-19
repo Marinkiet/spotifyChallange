@@ -77,11 +77,11 @@ const Shesha = () => {
 
 // Note: Set commented out background colors to viualise sectioning of each View
 // and how it was flexed
+// Input [color: themeTextColor.primary(1)]: This theme text color takes number between 0 and 1 which specifies the opacity.
+
 const styles = StyleSheet.create({
   themeTextPrimary: {
     fontFamily: themeFonts.circularBook,
-
-    // Input: This theme text color takes number between 0 and 1 which specifies the opacity.
     color: themeTextColor.primary(1)
   },
   themeTextSecondary: {
