@@ -3,6 +3,8 @@ import React from 'react'
 
 const Ikaya = () => {
   return (
+// TODO: Indicate any pending tasks or future improvements.
+// Need to add content to this screen?
     <View>
       <Text>Ikaya</Text>
     </View>
