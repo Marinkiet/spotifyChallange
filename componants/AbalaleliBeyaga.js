@@ -6,9 +6,14 @@ import Feather from 'react-native-vector-icons/Feather'
 import { themeFonts, themeTextColor } from '../theme';
 const AbalaleliBeyaga = () => {
     return (
+        /* LinearGradient Background
+         Purpose: Display the Montly Views contaier in 3 gradient fade white,gray dark colors 
+         What does it do? Creates lineaer gradient colors
+        */
         <LinearGradient
             colors={["#282828", "#1f1f1f", "#121212"]}
             style={styles.upNextContainer}>
+        
             <View style={styles.upNextDetails}>
 
                 <View style={styles.upNextDetailsSongCount}>
@@ -59,9 +64,16 @@ const AbalaleliBeyaga = () => {
     )
 }
 
+
+// Note: Set commented out background colors to viualise sectioning of each View
+// and how it was flexed
+// Input [color: themeTextColor.primary(1)]: This theme text color takes number between 0 and 1 which specifies the opacity.
+
+
 const styles = StyleSheet.create({
     themeTextPrimary: {
         fontFamily: themeFonts.circularBook,
+        
         color: themeTextColor.primary(1)
     },
     themeTextSecondary: {
